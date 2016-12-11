@@ -4,6 +4,8 @@
     "packageVersion": "0.0.0",
     "revealTheme": "league",
     "useSass": false,
-    "deployToGithubPages": false
+    "deployToGithubPages": true,
+    "githubUsername": "pustynnykh",
+    "githubRepository": "drupal-7-users-import"
   }
 }

@@ -13,6 +13,7 @@ module.exports = (grunt) ->
                     'index.html'
                     'slides/{,*/}*.{md,html}'
                     'js/*.js'
+                    'css/*.css'
                     'resources/**'
                 ]
 
@@ -31,6 +32,18 @@ module.exports = (grunt) ->
             jshint:
                 files: ['js/*.js']
                 tasks: ['jshint']
+
+            theme:
+                files: [
+                    'css/source/*.scss'
+                ]
+                tasks: ['sass']
+
+        sass:
+
+            dist:
+                files:
+                    'css/custom.css': 'css/source/custom.scss'
         
         connect:
 
@@ -67,6 +80,7 @@ module.exports = (grunt) ->
                 files: [{
                     expand: true
                     src: [
+                        'css/**'
                         'slides/**'
                         'bower_components/**'
                         'js/**'
@@ -123,6 +137,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'serve',
         'Run presentation locally and start watch process (living document).', [
             'buildIndex'
+            'sass'
             'connect:livereload'
             'watch'
         ]
@@ -130,6 +145,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
             'test'
+            'sass'
             'buildIndex'
             'copy'
         ]
@@ -139,7 +155,11 @@ module.exports = (grunt) ->
           'dist'
           'buildcontrol'
       ]
-    
+
+    grunt.registerTask 'css-themes',
+      'Build theme styles file', [
+          'sass'
+      ]
 
     # Define default task.
     grunt.registerTask 'default', [

@@ -1,0 +1,18 @@
+<h1><span class="colored-1">Save</span> callback</h1>
+
+<pre class="fragment"><code data-trim>
+/**
+ * Custom field processor for entityreference field type.
+ */
+function mymodule_user_import_default_field_processor($user_fields, $field_name, $values) {
+  $field = $user_fields->$field_name;
+
+  for ($i = 0; $i < count($values); $i++) {
+    if (!empty($values[$i])) {
+      $field[LANGUAGE_NONE][$i]['target_id'] = $values[$i];
+    }
+  }
+
+  return $field;
+}
+</code></pre>

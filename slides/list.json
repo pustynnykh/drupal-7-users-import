@@ -1,4 +1,14 @@
 [
     "intro/start.html",
-    "intro/name.html"
+    "intro/name.html",
+    "intro/current-company.html",
+    "intro/links.html",
+    "user-import/theme.html",
+    "user-import/why.html",
+    "user-import/module-features.html",
+    "user-import/module-disadvantages.html",
+    "user-import/customize-it.html",
+    "user-import/entityreference-support.html",
+    "user-import/entityreference-type.html",
+    "user-import/entityreference-save-callback.html"
 ]

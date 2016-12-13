@@ -594,7 +594,8 @@ body {
   margin: 0;
   border: none;
   background: none;
-  vertical-align: middle; }
+  vertical-align: middle;
+  box-shadow: none; }
   .reveal .company-logo.bottom-valign {
     vertical-align: bottom; }
 

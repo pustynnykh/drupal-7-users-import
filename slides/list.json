@@ -15,5 +15,9 @@
     "user-import/language-support.html",
     "user-import/language-field-hooks.html",
     "user-import/language-field-hooks2.html",
-    "user-import/language-field-hooks3.html"
+    "user-import/language-field-hooks3.html",
+    "user-import/save-import-template.html",
+    "user-import/import-template-build.html",
+    "user-import/import-template-save.html",
+    "thanks.html"
 ]

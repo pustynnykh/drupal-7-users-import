@@ -6,7 +6,9 @@
 /**
  * Implements hook_field_user_import_supported_alter().
  */
-function mymodule_import_field_user_import_supported_alter(&$supported) {
+function mymodule_import_field_user_import_supported_alter(
+    &$supported
+  ) {
   // Allow  entityreference field type.
   $supported['entityreference'] = array(
     'validate' => 'mymodule_user_import_default_field_validator',

@@ -1,4 +1,4 @@
-<h1>Language field <span class="colored-1">hooks</span></h1>
+<h2>Language field <span class="colored-1">hooks</span></h2>
 
 <p>Save to user account</p>
 
@@ -6,10 +6,11 @@
 /**
  * Implements hook_user_import_pre_save().
  */
-function mymodule_user_import_pre_save($settings, $account, $fields, $errors, $update_setting_per_module) {
-    $edit['language'] = $fields['user']['language'][0];
-    return $edit;
+function mymodule_user_import_pre_save(
+    $settings, $account, $fields,
+    $errors, $update_setting_per_module
+  ) {
+  $edit['language'] = $fields['user']['language'][0];
+  return $edit;
 }
 </code></pre>
-
-<p class="fragment"><span class="colored-1">EZ</span></p>

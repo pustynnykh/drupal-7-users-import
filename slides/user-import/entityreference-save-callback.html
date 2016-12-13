@@ -4,7 +4,9 @@
 /**
  * Custom field processor for entityreference field type.
  */
-function mymodule_user_import_default_field_processor($user_fields, $field_name, $values) {
+function mymodule_user_import_default_field_processor(
+    $user_fields, $field_name, $values
+  ) {
   $field = $user_fields->$field_name;
 
   foreach ($values as $delta => $value) {
@@ -16,5 +18,3 @@ function mymodule_user_import_default_field_processor($user_fields, $field_name,
   return $field;
 }
 </code></pre>
-
-<p class="fragment"><span class="colored-1">EZ</span></p>

@@ -7,8 +7,13 @@
     "user-import/why.html",
     "user-import/module-features.html",
     "user-import/module-disadvantages.html",
+    "user-import/ui.html",
     "user-import/customize-it.html",
     "user-import/entityreference-support.html",
     "user-import/entityreference-type.html",
-    "user-import/entityreference-save-callback.html"
+    "user-import/entityreference-save-callback.html",
+    "user-import/language-support.html",
+    "user-import/language-field-hooks.html",
+    "user-import/language-field-hooks2.html",
+    "user-import/language-field-hooks3.html"
 ]

@@ -1,0 +1,13 @@
+<h1>Language field <span class="colored-1">hooks</span></h1>
+
+<p>Add field to mappings list</p>
+
+<pre class="fragment"><code data-trim>
+/**
+ * Implements hook_user_import_form_field_match().
+ */
+function mymodule_user_import_form_field_match() {
+    $options['user']['language'] = t('Language');
+    return $options;
+}
+</code></pre>

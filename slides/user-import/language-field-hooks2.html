@@ -1,0 +1,15 @@
+<h1>Language field <span class="colored-1">hooks</span></h1>
+
+<p>Provide field value</p>
+
+<pre class="fragment"><code data-trim>
+/**
+ * Implements hook_user_import_data().
+ */
+function mymodule_user_import_data($settings, $update_setting, $column_settings, $module, $field_id, $data, $column_id) {
+    if ($field_id == 'language') {
+        $value = trim($data[$column_id]);
+    }
+    return $value;
+}
+</code></pre>
